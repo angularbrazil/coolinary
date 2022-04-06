@@ -1,6 +1,6 @@
-
-
 # Coolinary
+
+Um projeto para facilitar a pesquisa de receitas na internet :D
 
 This project was generated using [Nx](https://nx.dev).
 
