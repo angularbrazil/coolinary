@@ -1,0 +1,28 @@
+{
+  "root": "apps/coolinary-e2e",
+  "sourceRoot": "apps/coolinary-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/coolinary-e2e/cypress.json",
+        "devServerTarget": "coolinary:serve:development"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "coolinary:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/coolinary-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["coolinary"]
+}
