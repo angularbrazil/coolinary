@@ -4,6 +4,7 @@
     "api": "apps/api",
     "api-interfaces": "libs/api-interfaces",
     "coolinary": "apps/coolinary",
-    "coolinary-e2e": "apps/coolinary-e2e"
+    "coolinary-e2e": "apps/coolinary-e2e",
+    "ui": "libs/ui"
   }
 }
