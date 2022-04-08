@@ -1,0 +1,25 @@
+@import "../styles/main.scss";
+
+:host {
+    &.iu-button {
+        position: relative;
+        color: $color-white;
+        background-color: $color-secondary;
+        cursor: pointer;
+        border: none;
+        padding: 1rem;
+        border-radius: 1rem;
+    
+        &--secondary {
+            background-color: $color-primary;
+        }
+    
+        &--danger {
+            background-color: $color-tertiary;
+        }
+    }
+    
+    &:active {
+        transform: translateY(1px);
+    }
+}
