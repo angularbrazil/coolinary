@@ -15,16 +15,16 @@ export class ButtonComponent {
   * Sets the type of the button
   */
   @Input()
-  type: 'secondary' | 'danger' | undefined;
+  iuType: 'secondary' | 'danger' | undefined;
 
   @HostBinding('class.iu-button--secondary')
   get secondary(): boolean {
-    return this.type === 'secondary';
+    return this.iuType === 'secondary';
   }
 
   @HostBinding('class.iu-button--danger')
   get danger(): boolean {
-    return this.type === 'danger';
+    return this.iuType === 'danger';
   }
 
 }

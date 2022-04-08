@@ -5,7 +5,7 @@ export default {
   title: ButtonComponent.name,
   component: ButtonComponent,
   argTypes: {
-    type: {
+    iuType: {
       description: `Define o tipo do botão`,
       options: ['primary', 'secondary', 'danger'],
       control: { type: 'radio'}
@@ -21,20 +21,20 @@ export default {
 
 const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   props: args,
-  template: `<button uiBtn [type]="type">Click me!</button>`
+  template: `<button uiBtn [iuType]="iuType">Click me!</button>`
 });
 
 export const Primary = Template.bind({});
 Primary.args = {
-  type: undefined
+  iuType: undefined
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  type: 'secondary'
+  iuType: 'secondary'
 };
 
 export const Danger = Template.bind({});
 Danger.args = {
-  type: 'danger'
+  iuType: 'danger'
 };
