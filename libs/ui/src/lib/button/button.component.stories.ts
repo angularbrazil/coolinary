@@ -38,3 +38,9 @@ export const Danger = Template.bind({});
 Danger.args = {
   iuType: 'danger'
 };
+
+export const Disabled = (args: ButtonComponent) => ({
+  template: `<button uiBtn disabled>Click me!</button>`,
+  props: { ...args },
+});
+Disabled.args = { }
