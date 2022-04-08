@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@coolinary/api-interfaces": ["libs/api-interfaces/src/index.ts"]
+      "@coolinary/api-interfaces": ["libs/api-interfaces/src/index.ts"],
+      "@coolinary/ui": ["libs/ui/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
