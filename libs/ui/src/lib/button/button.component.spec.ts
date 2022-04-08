@@ -11,7 +11,7 @@ describe(ButtonComponent.name, () => {
   });
 
   it('renders secondary button', async () => {
-    await render('<button uiBtn type="secondary">Button</button>', {
+    await render('<button uiBtn iuType="secondary">Button</button>', {
       declarations: [ButtonComponent]
     });
     const button = screen.getByRole('button');
@@ -19,7 +19,7 @@ describe(ButtonComponent.name, () => {
   });
 
   it('renders danger button', async () => {
-    await render('<button uiBtn type="danger">Button</button>', {
+    await render('<button uiBtn iuType="danger">Button</button>', {
       declarations: [ButtonComponent]
     });
     const button = screen.getByRole('button');
