@@ -25,4 +25,12 @@ describe(ButtonComponent.name, () => {
     const button = screen.getByRole('button');
     expect(button).toHaveClass('iu-button--danger');
   });
+
+  it('renders disabled button', async () => {
+    await render('<button uiBtn [disabled]="true">Button</button>', {
+      declarations: [ButtonComponent]
+    });
+    const button = screen.getByRole('button');
+    expect(button).toBeDisabled();
+  });
 })

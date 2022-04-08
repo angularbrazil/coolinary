@@ -1,6 +1,7 @@
 @import "../styles/main.scss";
 
 :host {
+
     &.iu-button {
         position: relative;
         color: $color-white;
@@ -9,17 +10,33 @@
         border: none;
         padding: 1rem;
         border-radius: 1rem;
+
+        &:hover:not(:disabled) {
+            background-color: uiDarken($color-secondary);
+        }
     
         &--secondary {
             background-color: $color-primary;
+            &:hover:not(:disabled) {
+                background-color: uiDarken($color-primary);
+            }
         }
     
         &--danger {
             background-color: $color-tertiary;
+            &:hover:not(:disabled) {
+                background-color: uiDarken($color-tertiary);
+            }
         }
     }
     
     &:active {
         transform: translateY(1px);
+    }
+
+    &:disabled {
+        cursor: not-allowed;
+        color: $color-disabled-dark;
+        background-color: $color-disabled;
     }
 }

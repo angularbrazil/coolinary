@@ -1,0 +1,3 @@
+@function uiDarken($color) {
+    @return darken($color, 12%);
+}
