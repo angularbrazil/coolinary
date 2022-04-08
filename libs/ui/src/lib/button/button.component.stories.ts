@@ -6,6 +6,7 @@ export default {
   component: ButtonComponent,
   argTypes: {
     type: {
+      description: `Define o tipo do botão`,
       options: ['primary', 'secondary', 'danger'],
       control: { type: 'radio'}
     }
@@ -26,14 +27,14 @@ const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
 export const Primary = Template.bind({});
 Primary.args = {
   type: undefined
-}
+};
 
 export const Secondary = Template.bind({});
 Secondary.args = {
   type: 'secondary'
-}
+};
 
 export const Danger = Template.bind({});
 Danger.args = {
   type: 'danger'
-}
+};

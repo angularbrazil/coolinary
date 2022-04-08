@@ -10,6 +10,10 @@ export class ButtonComponent {
   @HostBinding('class.iu-button')
   iuButton = true;
 
+  /* 
+  * Define o tipo do botão
+  * Sets the type of the button
+  */
   @Input()
   type: 'secondary' | 'danger' | undefined;
 

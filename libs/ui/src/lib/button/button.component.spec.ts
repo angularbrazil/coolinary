@@ -1,25 +1,28 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { render, screen } from '@testing-library/angular';
 import { ButtonComponent } from './button.component';
 
-describe('ButtonComponent', () => {
-  let component: ButtonComponent;
-  let fixture: ComponentFixture<ButtonComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ButtonComponent ]
-    })
-    .compileComponents();
+describe(ButtonComponent.name, () => {
+  it('renders primary button with default args', async () => {
+    await render('<button uiBtn>Button</button>', {
+      declarations: [ButtonComponent]
+    });
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('iu-button');
   });
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ButtonComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('renders secondary button', async () => {
+    await render('<button uiBtn type="secondary">Button</button>', {
+      declarations: [ButtonComponent]
+    });
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('iu-button--secondary');
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('renders danger button', async () => {
+    await render('<button uiBtn type="danger">Button</button>', {
+      declarations: [ButtonComponent]
+    });
+    const button = screen.getByRole('button');
+    expect(button).toHaveClass('iu-button--danger');
   });
-});
+})
