@@ -1,0 +1,33 @@
+{
+  "root": "libs/utils/operators",
+  "sourceRoot": "libs/utils/operators/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/js:tsc",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/utils/operators",
+        "main": "libs/utils/operators/src/index.ts",
+        "tsConfig": "libs/utils/operators/tsconfig.lib.json",
+        "assets": ["libs/utils/operators/*.md"]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/utils/operators/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/utils/operators"],
+      "options": {
+        "jestConfig": "libs/utils/operators/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

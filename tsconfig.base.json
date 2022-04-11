@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@coolinary/api-interfaces": ["libs/api-interfaces/src/index.ts"],
-      "@coolinary/ui": ["libs/ui/src/index.ts"]
+      "@coolinary/ui": ["libs/ui/src/index.ts"],
+      "@coolinary/utils/operators": ["libs/utils/operators/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
