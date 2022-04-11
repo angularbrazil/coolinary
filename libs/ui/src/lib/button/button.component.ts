@@ -1,26 +1,26 @@
 import { Component, HostBinding, Input } from '@angular/core';
 
 @Component({
+  // eslint-disable-next-line @angular-eslint/component-selector
   selector: 'button[uiBtn], a[uiBtn]',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
 })
 export class ButtonComponent {
-
   @HostBinding('class.iu-button')
   iuButton = true;
 
   /*
-  * Define o tipo do botão
-  * Sets the type of the button
-  */
+   * Define o tipo do botão
+   * Sets the type of the button
+   */
   @Input()
   iuType: 'secondary' | 'danger' | undefined;
 
   /*
-  * Define a variante do botão
-  * Sets the variant of the button
-  */
+   * Define a variante do botão
+   * Sets the variant of the button
+   */
   @Input()
   iuVariant: 'text' | undefined;
 
@@ -38,5 +38,4 @@ export class ButtonComponent {
   get text(): boolean {
     return this.iuVariant === 'text';
   }
-
 }

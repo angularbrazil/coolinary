@@ -9,33 +9,33 @@ export default {
       description: `Define o tipo do botão`,
       defaultValue: 'primary',
       options: ['primary', 'secondary', 'danger'],
-      control: { type: 'radio' }
+      control: { type: 'radio' },
     },
     iuVariant: {
       description: 'Define a variante do botão',
       defaultValue: 'default',
-      options: ['default', 'text', 'outlined'],
-      control: { type: 'radio' }
-    }
+      options: ['default', 'text'],
+      control: { type: 'radio' },
+    },
   },
   decorators: [
     moduleMetadata({
       imports: [],
-      declarations: [ButtonComponent]
-    })
+      declarations: [ButtonComponent],
+    }),
   ],
 } as Meta<ButtonComponent>;
 
 const Template: Story<ButtonComponent> = (args: ButtonComponent) => ({
   props: args,
-  template: `<button uiBtn [iuType]="iuType" [iuVariant]="iuVariant">Click me!</button>`
+  template: `<button uiBtn [iuType]="iuType" [iuVariant]="iuVariant">Click me!</button>`,
 });
 
 export const Default = Template.bind({});
-Default.args = { };
+Default.args = {};
 
 export const Disabled = (args: ButtonComponent) => ({
   template: `<button uiBtn disabled>Click me!</button>`,
   props: { ...args },
 });
-Disabled.args = { }
+Disabled.args = {};
