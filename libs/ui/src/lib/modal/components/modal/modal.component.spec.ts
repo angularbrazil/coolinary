@@ -1,25 +1,12 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { render, screen } from '@testing-library/angular';
 
 import { ModalComponent } from './modal.component';
 
-describe('ModalComponent', () => {
-  let component: ModalComponent;
-  let fixture: ComponentFixture<ModalComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ModalComponent ]
-    })
-    .compileComponents();
-  });
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(ModalComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
+describe(ModalComponent.name, () => {
+  it('renders modal with content', async () => {
+    await render('<ui-modal>Content</ui-modal>', {
+      declarations: [ModalComponent],
+    });
+    expect(screen.getByRole('dialog', { name: /modal title/i }));
   });
 });
