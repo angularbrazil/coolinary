@@ -1,0 +1,27 @@
+.modal-overlay {
+  position: fixed;
+  z-index: 100;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modal {
+  padding: 0 2rem 2rem 2rem;
+  margin: 2%;
+  min-width: 94%;
+  @media (min-width: 600px) {
+    min-width: 60%;
+  }
+  border-radius: 4px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.25);
+  background-color: #fff;
+}
+
+.modal-title {
+  border-bottom: solid 1px;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
