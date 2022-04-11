@@ -16,10 +16,13 @@
         "inlineStyleLanguage": "scss",
         "assets": [
           "apps/coolinary/src/favicon.ico",
-          "apps/coolinary/src/assets"
+          "apps/coolinary/src/assets",
+          "apps/coolinary/src/manifest.webmanifest"
         ],
         "styles": ["apps/coolinary/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "serviceWorker": true,
+        "ngswConfigPath": "apps/coolinary/ngsw-config.json"
       },
       "configurations": {
         "production": {
