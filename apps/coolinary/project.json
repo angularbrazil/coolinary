@@ -96,5 +96,5 @@
       }
     }
   },
-  "tags": []
+  "tags": ["scope:coolinary", "type:app"]
 }
